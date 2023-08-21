@@ -1,6 +1,11 @@
-+ git
-  + [代理设置](git/Git代理设置.md)
+<!-- docs/_sidebar.md -->
 
-+ docsify
+- Docsify
+    - [安装](docsify/安装.md)
+    - [开发](docsify/开发.md)
+      - [baidu](www.baidu.com)
+      - [baidu2](www.baidu.com)
 
-  + [安装](docsify/安装.md)
+
+- Git
+    - [Git](git/Git代理设置.md)
