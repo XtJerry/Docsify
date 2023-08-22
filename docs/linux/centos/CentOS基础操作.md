@@ -40,6 +40,9 @@ $ netstat -ntlp
 # lsof	-i:port
 > lsof	-i:25
 
+# 查看目录大小
+> du -sm * | sort -n 
+
 ```
 ### 二、vi/vim操作
 ``` bash
@@ -154,6 +157,30 @@ $ tar -czvf test.tar.gz text.txt
 $ tar -xvf test.tar
 $ tar -xzf test.tar.gz -C /root
 ```
+### 七、vi中文乱码
+```shell
+# vi 中文乱码
+vi ~/.vimrc
 
-### 七、 其他操作
+# 添加
+set fileencodings=utf-8,gbk,gb2312,gb18030
+set fileencoding=utf8
+set encoding=utf8
+# 保存
+:wq
+
+```
+
+### 八、linux权限
+```shell
+-rw------- (600) 只有拥有者有读写权限。
+-rw-r--r-- (644) 只有拥有者有读写权限；而属组用户和其他用户只有读权限。
+-rwx------ (700) 只有拥有者有读、写、执行权限。
+-rwxr-xr-x (755) 拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
+-rwx--x--x (711) 拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
+-rw-rw-rw- (666) 所有用户都有文件读、写权限。
+-rwxrwxrwx (777) 所有用户都有读、写、执行权限。
+```
+
+### *、 其他操作
 	持续整理中...

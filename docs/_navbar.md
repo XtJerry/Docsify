@@ -1,8 +1,10 @@
 [//]: # (导航栏)
 
-- [Docsify](docsify/安装.md)
+- [Task](other/task/近期任务.md)
+-
+- [快捷](other/shortcut/快捷方式.md)
 
-- [Git](git/Git代理设置.md)
+
 
 
 
