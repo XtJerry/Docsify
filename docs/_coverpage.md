@@ -2,5 +2,5 @@
 
 # XtDocs
 
-[xtpla@126.com](mailto:xtpla@126.com)
+[xtplaa@gmail.com](mailto:xtplaa@gmail.com)
 

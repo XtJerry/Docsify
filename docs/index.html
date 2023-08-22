@@ -18,7 +18,8 @@
 <div id="app"></div>
 <script>
     window.$docsify = {
-        loadSidebar: true,//左边bar
+        // repo: '',//Github跳转
+        loadSidebar: true,//侧边bar
         name: '',//名称
         subMaxLevel: 2,//子目录
         sidebarDisplayLevel: 1,
@@ -27,28 +28,35 @@
         },
         coverpage: true,//封面
         onlyCover: false,//封面作为首页
-        loadNavbar: true,
-        // disqus: 'xtpla',//Disqus
+        loadNavbar: true,//导航
+        // disqus: 'xtpla',//QADisqus
+        search: {//搜索
+            maxAge: 86400000,
+            paths: 'auto',
+            placeholder: '🔍 Search',
+            noData: '👿 Not Found!',
+            depth: 6,
+        },
     }
 </script>
 <!-- Docsify v4 -->
-<!--<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>-->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"/>-->
 
 <!-- plugins -->
 <!--多级侧边栏-->
-<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"/>
 <!--图片放大缩小-->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"/>
 <!--忽略某张图片
 ![](image.png ":no-zoom")-->
 <!--复制到剪贴板-->
-<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"/>
 <!--Disqus-->
-<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>-->
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"/>-->
 <!--gitalk-->
-<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>-->
-<!--<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>-->
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"/>-->
+<!--<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"/>-->
 <!--<script>-->
 <!--    const gitalk = new Gitalk({-->
 <!--        clientID: 'a9cfd0c3de5f3246961a',-->
@@ -61,5 +69,7 @@
 <!--        id: decodeURI(window.location.pathname),-->
 <!--    })-->
 <!--</script>-->
+<!--搜索-->
+<script src="//cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"/>
 </body>
 </html>
