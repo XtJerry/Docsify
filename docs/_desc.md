@@ -13,6 +13,7 @@
 
     - [tools](android/tools),Android工具相关
         - [adb](android/tools/adb),adb工具
+        - [androidstudio](android/tools/androidstudio),AndroidStudio工具
         - [sign](android/tools/sign),系统签名
 
 ---
@@ -55,7 +56,7 @@
     - [frp](software/frp),Frps/c
     - [https](software/https),网络
         - [certbot](software/https/certbot),证书机器人
-    
+
     - [jpush](software/jpush),推送
     - [wordpress](software/wordpress),WordPress相关
 
