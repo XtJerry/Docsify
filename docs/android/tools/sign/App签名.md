@@ -15,3 +15,15 @@ $ java -jar signapk.jar platform.x509.pem platform.pk8 Test2.1.apk Test.2.1.Sign
 # 未出错表示签名完成
 ```
 上文命令中的[platform.x509.pem](https://github.com/XtJoin/public/blob/main/android/SystemSign/Firefly/platform.x509.pem)和[platform.pk8](https://github.com/XtJoin/public/blob/main/android/SystemSign/Firefly/platform.pk8)是Firefly(萤火虫)平板系统的系统签名文件。
+
+
+### APK文件签名查看
+```shell
+keytool -list -printcert -jarfile app.apk
+```
+
+### JKS文件签名查看
+```shell
+keytool -v -list -keystore keystore.jks
+
+```

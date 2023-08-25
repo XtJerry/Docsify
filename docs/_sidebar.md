@@ -22,7 +22,7 @@
     - Adb
         - [Adb常用操作](android/tools/adb/Adb常用操作.md)
     - Sign
-        - [App系统签名](android/tools/sign/App系统签名.md)
+        - [App系统签名](android/tools/sign/App签名.md)
 
 - Golang
 - Kitty
