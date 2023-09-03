@@ -7,15 +7,15 @@
     - Kitty
         - [Application多进程重复初始化解决](android/app/kitty/Application多进程重复初始化解决.md)
         - [Json特殊格式](android/app/kitty/Json特殊格式.md)
-- kotlin
-    - Study
-        - [Kotlin_01](android/kotlin/study/Kotlin_01.md)
-        - [Kotlin_02](android/kotlin/study/Kotlin_02.md)
-        - [Kotlin_03](android/kotlin/study/Kotlin_03.md)
-        - [Kotlin_04](android/kotlin/study/Kotlin_04.md)
-        - [Kotlin_05](android/kotlin/study/Kotlin_05.md)
-- Source
-    - [Android源码下载](android/source/Android源码下载.md)
+    - kotlin
+        - Study
+            - [Kotlin_01](android/kotlin/study/Kotlin_01.md)
+            - [Kotlin_02](android/kotlin/study/Kotlin_02.md)
+            - [Kotlin_03](android/kotlin/study/Kotlin_03.md)
+            - [Kotlin_04](android/kotlin/study/Kotlin_04.md)
+            - [Kotlin_05](android/kotlin/study/Kotlin_05.md)
+    - Source
+        - [Android源码下载](android/source/Android源码下载.md)
 - Tools
     - AndroidStudio
         - [快捷键](android/tools/androidstudio/快捷键.md)
@@ -25,9 +25,10 @@
         - [App系统签名](android/tools/sign/App签名.md)
 
 - Golang
-- Kitty
-    - [GoLang开发误区](golang/kitty/GoLang开发误区.md)
-    - [Docker容器开发](golang/kitty/Docker容器开发.md)
+    - Kitty
+        - [GoLang开发误区](golang/kitty/GoLang开发误区.md)
+        - [Docker容器开发](golang/kitty/Docker容器开发.md)
+        - [交叉编译](golang/kitty/交叉编译.md)
 
 - Vue
     - Kitty
@@ -39,11 +40,13 @@
         - [Mysql修改自增编号.md](db/mysql/Mysql修改自增编号.md)
 
 - Docker
-  - [Docker安装](docker/Docker安装.md)
-  - [DockerCompose安装](docker/DockerCompose安装.md)
-  - [Dockerfile](docker/Dockerfile.md)
+    - [Docker安装](docker/Docker安装.md)
+    - [DockerCompose安装](docker/DockerCompose安装.md)
+    - [Dockerfile](docker/Dockerfile.md)
 
 - Linux
+    - Kitty
+        - [常见问题及解决](linux/kitty/常见问题及解决.md)
     - CentOs
         - [CentOS基础操作](linux/centos/CentOS基础操作.md)
     - Shell
@@ -55,6 +58,8 @@
 - Windows
 
 - Software
+    - AndroidWeb
+      - [让Android手机变为服务器](software/androidweb/让Android手机变为服务器.md)
     - WordPress
         - [WordPress搭建](software/wordpress/WordPress搭建.md)
         - [WordPress如何上传大于2M的文件？](software/wordpress/WordPress如何上传大于2M的文件？.md)
