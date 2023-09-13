@@ -52,6 +52,7 @@
 ---
 
 + [software](software),软件相关
+    - [androidweb](software/androidweb),Android变为Web方式
     - [docsify](software/docsify),Docsify
     - [frp](software/frp),Frps/c
     - [https](software/https),网络
