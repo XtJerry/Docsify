@@ -14,7 +14,9 @@ keytool -printcert -jarfile  app.apk
 # 输入密码为签名文件密码
 keytool -v -list -keystore keystore.jks
 ```
+
 输出
+
 ```shell
 输入密钥库口令:  
 密钥库类型: JKS
@@ -137,3 +139,64 @@ $ java -jar signapk.jar platform.x509.pem platform.pk8 Test2.1.apk Test.2.1.Sign
 # 未出错表示签名完成
 ```
 
+## 三、gradlew 打包命令
+
+---
+*使用gradlew打包好处在于快捷，不用使用工具栏的打包菜单，选择签名，输入密码等复杂的设置，且在配置多渠道打包时很方便*
+
+### 1. 配置签名信息到build.gradle
+
+```groovy
+//...
+android {
+//  ...
+    signingConfigs {
+        release {
+            storeFile file('your_keystore_file.jks') //可以放到项目中或项目外的位置,在此直接放到build.gradle同级目录下
+            storePassword 'store_password'
+            keyAlias 'your_certificate_alias'
+            keyPassword 'alias_password'
+        }
+    }
+//  ...
+    buildTypes {
+        release {
+            //...
+            // 默认签名配置
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //...
+            // 默认签名配置
+            signingConfig signingConfigs.release
+        }
+    }
+//...
+}
+```
+
+### 2. 打包
+
++ 正式环境
+
+```shell
+# Mac
+# app 为模块名称，根据实际情况而定
+./gradlew :app:assembleRelease
+
+# Windows
+.\gradlew.bat :app:assembleRelease
+
+```
+
++ 测试环境
+
+```shell
+# Mac
+# app 为模块名称，根据实际情况而定
+./gradlew :app:assembleDebug
+
+# Windows
+.\gradlew.bat :app:assembleDebug
+
+```
