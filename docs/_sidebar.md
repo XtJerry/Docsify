@@ -7,6 +7,7 @@
     - Kitty
         - [Application多进程重复初始化解决](android/app/kitty/Application多进程重复初始化解决.md)
         - [Json特殊格式](android/app/kitty/Json特殊格式.md)
+        - [视频弹幕实现](android/app/kitty/视频弹幕实现.md)
     - kotlin
         - Study
             - [Kotlin_01](android/kotlin/study/Kotlin_01.md)
