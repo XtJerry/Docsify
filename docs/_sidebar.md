@@ -79,3 +79,4 @@
     - [Task](other/task/近期任务.md)
     - [Git收藏](other/github/Git项目收藏.md)
     - [OpenSource](other/opensource/开源项目收藏.md)
+    - [Search](other/search/搜索引擎使用技巧.md)

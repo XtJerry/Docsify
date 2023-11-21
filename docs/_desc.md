@@ -48,6 +48,7 @@
     - [opensource](other/opensource),开源项目收藏
     - [shortcut](other/shortcut),快捷方式(收藏)
     - [task](other/task),最近任务
+    - [search](other/search),搜索
 
 ---
 
