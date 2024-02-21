@@ -1,14 +1,17 @@
 ### 一、环境准备
+
 1、centos 7.8
 2、[docker容器安装](https://docs.docker.com/get-docker)
 3、[docker-compose安装](https://docs.docker.com/compose/install)
 
 ### 二、Wordpress安装
+
 1、直接使用docker[官方wordpress镜像](https://hub.docker.com/_/wordpress)的*.yml进行安装
 2、运行并测试
 
 stack.yml(yml文件放置位置自行定义)
 *下面设置的8080是宿主机对外的访问端口，使用nginx可以不用打开防火墙，否则需要打开防火墙。*
+
 ``` yml
 version: '3.1'
 
@@ -43,7 +46,9 @@ volumes:
   db:
 
 ```
+
 运行并执行命令
+
 ``` bash
 $ mkdir -p /usr/src/wordpress
 $ cd /usr/src/wordpress
@@ -53,15 +58,18 @@ $ touch stack.yml
 $ vi stack.yml
 $ docker-compose -f stack.yml up -d
 ```
+
 命令执行完毕后等待完毕，无异常后即可在浏览区输入设备访问地址，在进行配置即可(语言选择，登录密码等等)。
+
 ### 三、nginx做反向代理(可选安装)
+
 1、安装nginx镜像
 2、获取默认配置文件
 3、设置配置文件
 4、启动容器nginx
 
-
 详细步骤如下(其中路径/usr/src/nginx路径请自行定义)：
+
 ``` bash
 # 下载镜像
 $ docker pull nginx:1.19.7
@@ -82,7 +90,9 @@ $ docker inspect [容器id]
 $ vi /usr/src/nginx/config/conf.d/default.conf
 $ docker run --restart=always -e TZ="Asia/Shanghai" --name xt_nginx -v /usr/src/nginx/config/nginx.conf:/etc/nginx/nginx.conf -v /usr/src/nginx/config/conf.d/default.conf:/etc/nginx/conf.d/default.conf -v /usr/src/nginx/html:/usr/share/nginx/html -p 80:80 -d nginx:1.19.7
 ```
+
 default.conf
+
 ``` txt
 server {
 ......
@@ -102,4 +112,5 @@ server {
 ```
 
 ### 四、问题及解决方法
+
 	安装过程问题多姿多彩，任何情况都先通过表象将异常范围缩小，然后再通过相关方、方法、记录、日志、google等定位问题，解决问题。
