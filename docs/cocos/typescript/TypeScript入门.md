@@ -213,6 +213,7 @@ TypeScript中包含算术、逻辑、关系、位、赋值、三元、字符和�
 
 + 逻辑运算符
     + == 等于
+    + === 绝对等于(类型&值)
     + != 不等于
     + \> 大于
     + \< 小于
@@ -698,7 +699,7 @@ console.log("toPrecision",num.toPrecision(2))//把数字格式化为指定的长
 
 + String
 ```typescript
-let txt = new String("string");
+let txt = new String("String字符");
 // 或
 // let txt="string"
 console.log("length",txt.length)//字符串长度，中文也仅占用1
@@ -711,17 +712,152 @@ console.log("lastIndexOf",txt.lastIndexOf("ing"))//最后出现某个字符串�
 //如果调用字符串与比较字符串相等，则返回 0。
 //如果调用字符串在比较字符串之后，则返回正数（通常是 1）
 console.log("localeCompare",txt.localeCompare("string字符"))//用本地特定的顺序来比较两个字符串。
-console.log("match",txt.match("str"))
+console.log("match",txt.match("^tr"))//查找找到一个或多个正则表达式的匹配。
+console.log("replace",txt.replace("string",""))//替换与正则表达式匹配的子串
+console.log("search",txt.search("astring"))//-1未查询到,检索与正则表达式相匹配的值
+console.log("slice",txt.slice(2,3))//提取字符串的片断，并在新的字符串中返回被提取的部分。
+console.log("substr",txt.substring(2,3))//从起始索引号提取字符串中指定数目的字符。
+console.log("split",txt.split("ing"))//把字符串分割为子字符串数组。
+//据主机的语言环境把字符串转换为小写
+console.log("toLocaleLowerCase",txt.toLocaleLowerCase())//转小写
+console.log("toLocaleUpperCase",txt.toLocaleUpperCase())//转大写
+//把字符串转换为小写
+console.log("toLowerCase",txt.toLowerCase())//转小写
+console.log("toUpperCase",txt.toUpperCase())//转大写
+console.log("toString",txt.toString())//返回字符串。
+console.log("valueOf",txt.valueOf()=="String字符")//返回指定字符串对象的原始值。
 
 ```
 
 + Array
 ```typescript
+//数据创建
+let names:string[]=["Rock","Tom","Jerry"]
+
+
+//数组创建
+names=new Array(2) //创建了默认2个原始的数组
+console.log("new Array(2).length",new Array(2).length)
+names[0]="Tome"
+names[1]="Jerry"
+names[2]="Rock"
+
+//数组解构
+let [a,b,c]=names
+console.log(a,b,c)
+
+//数组遍历
+for(let i in names){
+    console.log(i)
+}
+names.forEach((value,i)=>{
+    console.log(i,value)
+})
+
+//多维数组
+var groupName:string[][]=new Array(["a","b"],["a","b"])
+console.log(groupName)
+
+//数组方法
+let a_array=Array(1,2)
+let b_array=Array(3,4)
+//every、forEach、filter不再讲，另见控制语句中For循环
+console.log("concat",a_array.concat(b_array))//连接两个或更多的数组，并返回结果。
+console.log("indexOf",a_array.indexOf(2))//搜索数组中的元素，并返回它所在的位置。如果搜索不到，返回值 -1，代表没有此项
+console.log("lastIndexOf",a_array.lastIndexOf(2))//返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
+console.log("join",a_array.join())//把数组的所有元素放入一个字符串。
+console.log("map",a_array.map((i)=>{return i*i}))//通过指定函数处理数组的每个元素，并返回处理后的数组。
+//开头修改
+console.log("shift",a_array.shift(),a_array)//删除并返回数组的第一个元素。
+console.log("unshift",a_array.unshift(5,1),a_array)//向数组的开头添加一个或更多元素，并返回新的长度。
+//末尾修改
+console.log("pop",a_array.pop(),a_array)//删除数组的最后一个元素并返回删除的元素。
+console.log("push",a_array.push(3),a_array)//向数组的末尾添加一个或更多元素，并返回新的长度。
+//(a,b)=>{return a+b}和function(a,b){return a+b}相同的逻辑不同的写法，前者Lambda表达式，后者匿名函数
+console.log("reduce",a_array.reduce((a,b)=>{return a+b}))//将数组元素计算为一个值（从左到右）。
+console.log("reduceRight",a_array.reduceRight((a,b)=>{return a+b}))//将数组元素计算为一个值（从右到左）。
+console.log("reverse",a_array.reverse())//反转数组的元素顺序。
+//
+console.log("sort",a_array.sort(),a_array)//对数组的元素进行排序。
+console.log("sort",a_array.sort((a,b)=>{return b-a}))//可以添加函数，自行排序
+
+console.log("slice",a_array.slice(1,3),a_array)//选取数组的的一部分，并返回一个新数组。
+
+//从数组中添加或删除元素。
+console.log("splice",a_array.splice(1,1),a_array)//从下标1(第2个元素)开始，删除2个元素
+console.log("splice",a_array.splice(1,0,50,60),a_array)//从下标1开始，删除0个，并添加2个元素50,60
 
 ```
 
 + Map
 ```typescript
+let map=new Map()//创建Map
+map=new Map([["name","Rock"],["age","30"]])//创建Map并赋值
+console.log(map)
+//Map相关属性
+console.log("clear",map.clear(),map)
+console.log("set",map.set("name","Rock"),map)
+console.log("get",map.get("name"))
+console.log("has",map.has("age"))
+console.log("delete",map.delete("age"))
+console.log("size",map.size)
+//keys
+for(let value of map.keys()){
+    console.log("keys",value)
+}
+//values
+for(let value of map.values()){
+    console.log("values",value)
+}
+//entries
+for(let entry of map.entries()){
+    console.log("entry",entry,entry[0],entry[1])
+}
+//key value
+for( let[k,v] of map){
+    console.log("K,V",k,v)
+}
+
+```
+
++ 元组
+```typescript
+//元组类型更像是any[]数组
+let any_array:any[]=["Rock",11,"Abc"]
+
+
+let tuple=["Rock",11,"Abc"]
+console.log("pop",tuple.pop())
+console.log("push",tuple.push("Xyz"),tuple)
+console.log("splice",tuple.splice(1,1,20),tuple)//也可以直接
+tuple[1]=10 //修改
+console.log(tuple)
+//其他属性，和Array比较类似不再一一列举
+
+
+//解构
+var[a,b]=tuple
+console.log(`a=${a},b=${b}`)
+
+```
+
++ 联合类型
+```typescript
+//一个属性包含多个类型，但又和any不完全一样
+//下面是简单的联合类型，可以是string、number、null类型
+var union:string|number|null
+union=20
+union='Rock'
+union=null
+//union=true //错误
+
+//联合数组，和属性类似
+var union_array:number[]|string[]
+union_array=[1,23]
+union_array=["Tom","Jerry"]
+//union_array=["Tom",10]//Error
+//union_array=[true,false]//Error
+
 
 ```
 
