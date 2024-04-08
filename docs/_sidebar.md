@@ -24,6 +24,9 @@
             - [Adb常用操作](android/tools/adb/Adb常用操作.md)
         - Sign
             - [App系统签名](android/tools/sign/App签名.md)
+- Ios
+  - OC(Object-C)
+    - [Object-C语法](ios/oc/Object-C语法.md)
 - Cocos
     - [Cocos相关知识](cocos/Cocos相关知识.md)
     - [JavaScript](cocos/javascript/JavaScript入门.md)
@@ -36,7 +39,9 @@
         - [GoLang开发误区](golang/kitty/GoLang开发误区.md)
         - [Docker容器开发](golang/kitty/Docker容器开发.md)
         - [交叉编译](golang/kitty/交叉编译.md)
-
+- Python
+  - simple
+    - [WebSocketClient示例](python/simple/WebSocketClient使用.md)
 - Vue
     - Kitty
         - [Link](vue/kitty/link/链接.md)
