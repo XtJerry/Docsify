@@ -1,4 +1,5 @@
 ## SwiftUI简介
++ [官方](https://developer.apple.com/documentation/swiftui)
 + [资料](https://appblur.com/swiftui.html)
 
 
@@ -14,3 +15,6 @@
   + Toggle，切换按钮
   + TextField，输入框
   + SecureField，密码输入框
+  + Slider，滑动条
+  + Picker，选择器(Pop弹窗，Tab切换(SegmentedPickerStyle))
+  + DatePicker，日期选择器(Pop弹窗)
